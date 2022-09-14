@@ -1,0 +1,1843 @@
+{
+	"info": {
+		"_postman_id": "9cde045d-740a-49fb-9cab-a60b7c26b30b",
+		"name": "new tables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15657167"
+	},
+	"item": [{
+    "name": "competitions",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competitions",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competitions"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competitions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competitions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"created_by_user_id\": \"\",\r\n           \"title\": \"\",\r\n           \"body\": \"\",\r\n           \"competition_type_id\": \"\",\r\n           \"first_question_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competitions",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competitions"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"created_by_user_id\": \"\",\r\n           \"title\": \"\",\r\n           \"body\": \"\",\r\n           \"competition_type_id\": \"\",\r\n           \"first_question_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competitions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competitions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competitions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competitions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "competition_member",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_member",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_member"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_member/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_member",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"user_id\": \"\",\r\n           \"competition_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_member",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_member"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"user_id\": \"\",\r\n           \"competition_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_member/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_member",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_member/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_member",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "competition_types",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_types",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_types"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_types/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_types",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_types",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_types"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_types/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_types",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_types/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_types",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "competition_category",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_category",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_category"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"category_id\": \"\",\r\n           \"competition_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_category",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_category"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"category_id\": \"\",\r\n           \"competition_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "competition_type_translation",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_type_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_type_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_type_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_type_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"competition_type_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_type_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_type_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"competition_type_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_type_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_type_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/competition_type_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "competition_type_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "questions",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/questions",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "questions"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/questions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "questions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"category_id\": \"\",\r\n           \"material_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/questions",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "questions"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"category_id\": \"\",\r\n           \"material_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/questions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "questions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/questions/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "questions",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "question_translation",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "question_options",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_options",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_options"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_options/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_options",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"is_correct\": \"\",\r\n           \"accuracy_percent\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_options",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_options"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"is_correct\": \"\",\r\n           \"accuracy_percent\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_options/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_options",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_options/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_options",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "question_option_translation",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_option_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_option_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_option_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_option_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_option_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_option_translation",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_option_translation"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_option_id\": \"\",\r\n           \"language_code\": \"\",\r\n           \"name\": \"\",\r\n           \"description\": \"\",\r\n           \"notes\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_option_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_option_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_option_translation/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_option_translation",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "question_to_question",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_to_question",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_to_question"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_to_question/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_to_question",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"prev_question_id\": \"\",\r\n           \"next_question_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_to_question",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_to_question"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"prev_question_id\": \"\",\r\n           \"next_question_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_to_question/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_to_question",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_to_question/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_to_question",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+},{
+    "name": "question_category",
+    "item": [
+        {
+            "name": "index",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "language_code",
+                        "value": "en",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_category",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_category"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "show",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "store",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"category_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_category",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_category"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "update",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n           \"id\": \"\",\r\n           \"question_id\": \"\",\r\n           \"category_id\": \"\"\r\n        }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "destroy",
+            "request": {
+                "auth": {
+                    "type": "oauth2",
+                    "oauth2": [
+                        {
+                            "key": "addTokenTo",
+                            "value": "header",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{staging_base_v3}}/{{users}}/api/v1/question_category/1",
+                    "host": [
+                        "{{staging_base_v3}}"
+                    ],
+                    "path": [
+                        "{{users}}",
+                        "api",
+                        "v1",
+                        "question_category",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+
+}],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

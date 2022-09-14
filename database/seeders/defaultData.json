@@ -1,0 +1,30 @@
+{
+    "competition_types": [
+        {
+            "id": 1,
+            "translations": [
+                {
+                    "id": 1,
+                    "language_code": "en",
+                    "competition_type_id": 1,
+                    "name": "private",
+                    "description": null,
+                    "notes": null
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "translations": [
+                {
+                    "id": 2,
+                    "language_code": "en",
+                    "competition_type_id": 2,
+                    "name": "public",
+                    "description": null,
+                    "notes": null
+                }
+            ]
+        }
+    ]
+}

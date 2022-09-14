@@ -1,0 +1,323 @@
+{
+  "tables": [
+    {
+      "table_name": "competitions",
+      "entity_name": "Competition",
+      "instance_name": "competition",
+      "base_path": "Competitions\\Competitions",
+      "operation": "crud",
+      "columns": [
+        {
+          "type": "integer",
+          "name": "id",
+          "validation_rules": "required|integer"
+        },
+        {
+          "type": "integer",
+          "name": "created_by_user_id",
+          "validation_rules": "required|integer"
+        },
+        {
+          "type": "string",
+          "name": "title",
+          "validation_rules": "required|string"
+        },
+        {
+          "type": "string",
+          "name": "body",
+          "validation_rules": "required|string"
+        },
+        {
+          "type": "integer",
+          "name": "competition_type_id",
+          "validation_rules": "required|integer"
+        },
+        {
+          "type": "integer",
+          "name": "first_question_id",
+          "validation_rules": "nullable|integer"
+        }
+      ]
+    },
+      {
+          "table_name": "competition_member",
+          "entity_name": "CompetitionMember",
+          "instance_name": "competitionMember",
+          "base_path": "Competitions\\CompetitionMember",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "user_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "competition_id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      },
+      {
+          "table_name": "competition_types",
+          "entity_name": "CompetitionType",
+          "instance_name": "competitionType",
+          "base_path": "Competitions\\CompetitionTypes\\CompetitionTypes",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      },
+      {
+          "table_name": "competition_category",
+          "entity_name": "CompetitionCategory",
+          "instance_name": "competitionCategory",
+          "base_path": "Competitions\\CompetitionCategory",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "category_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "competition_id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      },
+      {
+          "table_name": "competition_type_translation",
+          "entity_name": "CompetitionTypeTranslation",
+          "instance_name": "competitionTypeTranslation",
+          "base_path": "Competitions\\CompetitionTypes\\CompetitionTypeTranslation",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "competition_type_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "string",
+                  "name": "language_code",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "name",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "description",
+                  "validation_rules": "nullable|string"
+              },
+              {
+                  "type": "string",
+                  "name": "notes",
+                  "validation_rules": "nullable|string"
+              }
+          ]
+      },
+      {
+          "table_name": "questions",
+          "entity_name": "Question",
+          "instance_name": "question",
+          "base_path": "Questions\\Questions",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "category_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "material_id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      },
+      {
+          "table_name": "question_translation",
+          "entity_name": "QuestionTranslation",
+          "instance_name": "questionTranslation",
+          "base_path": "Questions\\QuestionTranslation",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "question_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "string",
+                  "name": "language_code",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "name",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "description",
+                  "validation_rules": "nullable|string"
+              },
+              {
+                  "type": "string",
+                  "name": "notes",
+                  "validation_rules": "nullable|string"
+              }
+          ]
+      },
+      {
+          "table_name": "question_options",
+          "entity_name": "QuestionOption",
+          "instance_name": "questionOption",
+          "base_path": "Questions\\QuestionOptions\\QuestionOptions",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "question_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "is_correct",
+                  "validation_rules": "nullable|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "accuracy_percent",
+                  "validation_rules": "nullable|integer"
+              }
+              ]
+      },
+      {
+          "table_name": "question_option_translation",
+          "entity_name": "QuestionOptionTranslation",
+          "instance_name": "questionOptionTranslation",
+          "base_path": "Questions\\QuestionOptions\\QuestionOptionTranslation",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "question_option_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "string",
+                  "name": "language_code",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "name",
+                  "validation_rules": "required|string"
+              },
+              {
+                  "type": "string",
+                  "name": "description",
+                  "validation_rules": "nullable|string"
+              },
+              {
+                  "type": "string",
+                  "name": "notes",
+                  "validation_rules": "nullable|string"
+              }
+          ]
+      },
+      {
+          "table_name": "question_to_question",
+          "entity_name": "QuestionToQuestion",
+          "instance_name": "questionToQuestion",
+          "base_path": "Questions\\QuestionToQuestion",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "prev_question_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "next_question_id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      },
+      {
+          "table_name": "question_category",
+          "entity_name": "QuestionCategory",
+          "instance_name": "questionCategory",
+          "base_path": "Questions\\QuestionCategory",
+          "operation": "crud",
+          "columns": [
+              {
+                  "type": "integer",
+                  "name": "id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "question_id",
+                  "validation_rules": "required|integer"
+              },
+              {
+                  "type": "integer",
+                  "name": "category_id",
+                  "validation_rules": "required|integer"
+              }
+          ]
+      }
+  ]
+}
