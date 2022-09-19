@@ -2,4 +2,5 @@
     "routes/Activities/ActivityTypes/ActivityTypes/activity_types.php",
     "routes/Activities/Browsers/Browsers/browsers.php",
     "routes/Activities/Platforms/Platforms/platforms.php"
+    "routes/Server/server.php"
 ]
