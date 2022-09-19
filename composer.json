@@ -8,8 +8,8 @@
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
-        "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "alisuliman/micro_features": "^2.0.0"
     },
     "require-dev": {
         "alisuliman/code_generator": "^1.0",
@@ -61,7 +61,12 @@
             "pestphp/pest-plugin": true
         }
     },
+
     "repositories":[
+        {
+            "type": "vcs",
+            "url": "git@github.com:AliSuliman01/micro_features.git"
+        },
         {
             "type": "vcs",
             "url": "git@github.com:AliSuliman01/code_gen.git"

@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use AliSuliman\MicroFeatures\Http\Middleware\Log;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
