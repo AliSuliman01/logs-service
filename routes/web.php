@@ -1,5 +1,6 @@
 <?php
 
+use App\Domain\Activities\ActivityLog\Model\ActivityLog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'activityLogs' => ActivityLog::with(['activity_type','platform_version.platform','browser_version.browser', 'device.device_type'])->get()
+    ]);
 });
